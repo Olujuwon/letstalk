@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/43261c3115.css" media="all">
+    <title>Lets Talk</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <p class="p1">Let's Talk</p>
+            <p class="p2">Think you have what it takes? Show us.</p>
+        </div> 
+        <div class="form">
+            <form action="">
+                <p>1. Personal information</p>
+                <hr><br>
+                <input type="text" name="Fullname" id="fullname" placeholder="Fullname*" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{2,})$" required>
+                <input type="tel" name="phoneno" id="phone" placeholder="Phone#*" pattern="^((\+?|00)\d{1,3}|0?)-?\d{3}-?\d{3}-?\d{3}| {4}$" required>
+                <input type="email" name="email" id="email" placeholder="Email*" required>
+                <input type="email" name="email" id="reemail" placeholder="Re-enter Email*" required><br>
+                <input type="text" name="address" id="address" placeholder="Address*" required>
+                <input type="text" name="address" id="readdress" placeholder="">
+                <input type="text" name="city" id="city" placeholder="City*" required pattern="^([a-z A-Z]{2,})$">
+                <input type="text" name="state" id="state" placeholder="State">
+                <input type="text" name="country" id="country" placeholder="Country/Region*" required>
+                <input type="number" name="zip" id="zip" placeholder="Zip/Postal Code" pattern="^([0-9a-z]{5})$">
+                <input type="text" name="habu" id="habu" placeholder="How did you hear about us" ><br>
+                <p>2. Skills and location</p>
+                <hr>
+                <br>
+                <p id="wisy">Which is your primary design discipline?*</p>
+                <input type="radio" value="Design Research" id="dere" name="discrad"> <label for="dere" class="rad">Design Research</label>
+                <input type="radio" value="Visual Design" id="vide" name="discrad"> <label for="vide" class="rad">Visual Design</label>
+                <input type="radio" value="UX Design" id="uxde" name="discrad"> <label for="uxde" class="rad">UX Design</label>
+                <input type="radio" value="Front-end Dev" id="fred" name="discrad"> <label for="fred" class="rad">Front-end Dev</label>
+                <br>
+                <br>
+                <br>
+                <div class="side1">
+                    <p id="doyo">Do you have experience with any other disciplines?</p>
+                    <div id="lcol">
+                    <label class="ldisc">
+                        <input type="checkbox" name="visdes" id="visdes"> Visual Design
+                        <span class="checkmark"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </span>
+                    </label>
+                    <label class="ldisc">
+                        <input type="checkbox" name="uxdes" id=" uxdes"> UX Design
+                        <span class="checkmark"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </span>
+                    </label>
+                    <label class="ldisc">
+                        <input type="checkbox" name="frendes" id="frendes"> Front-end Design
+                        <span class="checkmark"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </span>
+                    </label>
+                    <label class="ldisc">
+                        <input type="checkbox" name="desres" id="desres"> Design Research
+                        <span class="checkmark"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </span>
+                    </label>
+                    </div>
+                    <div id="divaddbutt">
+                        <input type="text" id="add" placeholder="Add new" >
+                        <input type="button" value="Add New" id="addbutt">
+                    </div>
+                </div>
+                <div class="side2">
+                    <p class="location">Where are you interested in working?</p>
+                    <p class="legal">You must be legally authorized to work without visa sponsorship in the location you choose.</p>
+                     <label class="lcountry">
+                        <input type="checkbox" name="austin" id="icountry"> Austin, Texas
+                        <span class="checkmark"></span>
+                     </label>
+                     <label class="lcountry">
+                        <input type="checkbox" name="newyork" id="icountry"> New York, New York
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lcountry">
+                        <input type="checkbox" name="toronto" id="icountry"> Toronto, Canada
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lcountry">
+                        <input type="checkbox" name="shanghai" id="icountry"> Shanghai, China
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lcountry">
+                            <input type="checkbox" name="dublin" id="icountry"> Dublin, Ireland
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lcountry">
+                        <input type="checkbox" name="hursley" id="icountry"> Hursley, United Kingdom
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lcountry">
+                        <input type="checkbox" name="boeblingen" id="icountry"> Boeblingen, Germany
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="lcountry">
+                            <input type="checkbox" name="somewhereelse" id="icountry"> Somewhere else
+                        <span class="checkmark"></span>
+                    </label>
+                    
+                </div>
+                <p>3. Portfolio</p>
+                <hr>
+                <p class="ibm">Prove you're IBM's next great designer by showing us who you are. What you have done. How you think. Tell us your story</p>
+                <input type="text" name="address" id="address" placeholder="Portfolio link*" required>
+                <br>
+                <textarea name="" id="" cols="30" rows="5" placeholder="Anything else (another link, availability, etc)?"></textarea>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Submit">
+                <br>
+                <br>
+            </form>
+        </div>
+        <script src="./index.js"></script>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,293 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: roboto;
+	
+  }
+.container {
+	width: 100%;
+	background-color: #454E57;
+	margin: auto;
+    font-family: roboto;
+}
+.head{
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.form{
+    width:80%;
+    margin: auto;
+}
+.p1{
+    font-size: xx-large;
+    margin: auto;
+    font-weight: bolder;
+}
+.p2{
+    font-size: medium;
+    margin: auto;
+}
+p{
+    font-size: medium;
+    font-weight: bold;
+    color: white
+}
+hr{
+    border-color: #00b2f0;
+    widows: 90%;
+}
+input{
+    color: white;
+    padding: 10px;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+}
+#fullname, #email, #reemail, #readdress [type="text"] {
+    width: 65%;
+    border: 0px;
+    border-bottom: solid 1px;
+    border-bottom-color:white;
+    background-color: #454E57;
+    display: block;
+    font-size: medium;
+}
+#phone {
+    border: 0px;
+    border-bottom: solid 1px;
+    border-bottom-color:white;
+    background-color: #454E57;
+    display: block;
+    font-size: medium;
+    width: 24%;
+    position: absolute;
+    top:148px;
+    right: 121px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+#city, #state, #country, #zip {
+    border: 0px;
+    border-bottom: solid 1px;
+    border-bottom-color:white;
+    background-color: #454E57;
+    font-size: medium;
+    float: left;
+    margin-right: 10px;
+    width: 21%;
+}
+#zip{
+    margin-left:35px; 
+}
+#habu{
+    border: 0px;
+    border-bottom: solid 1px;
+    border-bottom-color:white;
+    background-color: #454E57;
+    display: block;
+    font-size: medium;
+    width: 97%;
+}
+
+input[type="radio"]{
+    display: none;
+}
+.rad{
+    width: 22%;
+    border: 1px solid white;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    padding: 8px 2px;
+    font-size: medium;
+    color: white;
+}
+input[type="radio"]:checked + label{
+    border: 1px solid #00b2f0;
+    background: #00b2f0
+}
+#reemail:invalid,
+#email:invalid,
+#phone:invalid,
+#fullname:invalid,
+#city:invalid,
+#zip:invalid{
+    border-bottom: 1px solid red;
+}
+#wisy, #doyo{
+    font-size: medium;
+    font-weight: normal;
+    color: white
+}
+.disc, #icountry, input[type = 'checkbox']{
+    background-color: #454E57;
+    position: absolute;
+    opacity: 0;
+    margin: 10px
+    
+}
+.ldisc, .lcountry{
+    padding-left: 40px;
+    color: white;
+    display: block;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size:small;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+}
+i{
+    background-color: #454E57;
+    position: relative;
+    color: white;
+    bottom: -4px;
+    float: left;
+    right: -174px;
+    visibility: hidden;
+}
+.lcountry input:checked ~ .checkmark {
+    background-color: #454E57;
+}
+.ldisc input:checked ~ .checkmark {
+    background-color: #454E57;
+}
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    border: 1px solid white;
+}
+.ldisc input:checked ~ .checkmark:after {
+    display: block;
+}
+.lcountry input:checked ~ .checkmark:after {
+    display: block;
+}
+
+input[type = "checkbox"]:checked + .ldisc
+.checkmark {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white ;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.lcountry
+.checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.ldisc
+.checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.side1{
+    float: left;
+    width:50%;
+}
+.side2{
+    float: left;
+    width:50%
+}
+.location,
+.ibm{
+    font-size: medium;
+    font-weight: normal;
+    color: white
+}
+.legal{
+    font-size: small;
+    font-weight: normal;
+    color: white
+}
+#address,
+#readdress{
+    border: 0px;
+    border-bottom: solid 1px;
+    border-bottom-color:white;
+    background-color: #454E57;
+    display: block;
+    font-size: medium;
+    width: 97%;
+}
+textarea{
+    border: 0px;
+    border: solid 1px;
+    border-color:white;
+    background-color: #454E57;
+    display: block;
+    font-size: medium;
+    width: 98.5%;
+}
+input[type=submit]{
+    width: 20%;
+    background-color: #00b2f0;
+    border: none;
+    border-radius: 0px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+#add{
+    border: 0px;
+    border-bottom: solid 1px;
+    border-bottom-color:white;
+    background-color: #454E57;
+    font-size: medium;
+    float: left;
+    margin-right: 10px;
+    width: 21%;
+}
+#addbutt{
+    width: 20%;
+    background-color: #00b2f0;
+    border: none;
+    border-radius: 0px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
