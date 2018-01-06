@@ -8,88 +8,72 @@ const myForm = document.forms
 let labelArray = Array.from(labels);
 let tagArray = Array.from(images);
 let d = addNew.value;
+
 //display the delete icon on mouseover and hide the icon on mouseout
 tagArray.forEach(tag => {
     tag.parentElement.parentElement.addEventListener('mouseover' , function(){       
         tag.style.visibility="visible";
     });
+
     tag.parentElement.parentElement.addEventListener('mouseout' , function(){       
         tag.style.visibility="hidden";
     });
 })
+
 //deletes an entry whenever the delete icon is clicked
 labelArray.forEach(lab => {
     lab.addEventListener('click' , function(){       
         lab.remove();
     });
 })
-// create label
 
-const createLabelAtt= () => {
-    let labAtt = document.createElement("Label");
-    let  att = document.createAttribute("class");
-    att.value = "ldisc";
-    labAtt.setAttributeNode(att);
-    return labAtt;
-}
-// create input
-const createInputAtt= () => {
-    let inAtt = document.createElement("Input");
-    let  inType = document.createAttribute("type");
-    inType.value = "checkbox";
-    inAtt.setAttributeNode(inType);
-    return inAtt
-}
-// create span
-const createSpanAtt= () => {
-    let spanAtt = document.createElement("Span");
-    let  spanClass = document.createAttribute("class");
-    spanClass.value = "checkmark";
-    spanAtt.setAttributeNode(spanClass);
-    return spanAtt
-}
-// create image
-const createImageAtt= () => {
-    let inAtt = document.createElement("i");
+//creates the new li element with the value as the innertext and resets the input
+document.getElementById("addbutt").addEventListener("click", function addNewLabel(e){
+    let val = addNew.value
+    console.log(val)
+    if (!val){alert("Please Enter a Value")} 
+    else { 
+        createLi(val)
+        document.getElementById("add").value = "";
+    }
+});
+
+// create label and the other elements attached to it
+const  createLi = (text) =>{
+    let ul = document.getElementById('lcol');
+    let li = document.createElement('label');
+    li.classList.add('ldisc')
+    li.innerText=text;
+
+    let span = document.createElement('span')
+    span.classList.add('checkmark')
+
+    let i= document.createElement('i')
     let  iClass = document.createAttribute("class");
     let  iaria = document.createAttribute("aria-hidden");
     let  istyle = document.createAttribute("style");
     iClass.value = "fa fa-trash-o";
     iaria.value = "true";
     istyle.value = "visibility: hidden;";
-    inAtt.setAttributeNode(iClass);
-    inAtt.setAttributeNode(iaria);
-    inAtt.setAttributeNode(istyle);
-    return inAtt
+    i.setAttributeNode(iClass);
+    i.setAttributeNode(iaria);
+    i.setAttributeNode(istyle);
+    span.appendChild(i)
+    li.appendChild(span);
+
+    ul.insertAdjacentElement("beforeend", li);
+    i.parentElement.parentElement.addEventListener('mouseover' , function(){       
+        i.style.visibility="visible";
+    });
+    i.parentElement.parentElement.addEventListener('mouseout' , function(){       
+        i.style.visibility="hidden";
+    });
+    i.addEventListener('click' , function(){       
+        li.remove();
+    });
 }
-//append everything
-let newLabel = createLabelAtt();
-let newInput = createInputAtt();
-let newSpan = createSpanAtt();
-let newI = createImageAtt();
 
-const addSecondElement = newLabel.appendChild(newInput)
-const addThirdElement = newLabel.appendChild(newSpan)
-const addFourthElement = newSpan.appendChild(newI)
-console.log('new Label', myForm);
-
-//addNew.addEventListener("mouseover", (e)=> console.log('value of inputfield',  newLabel.innerText = addNew.value));
-addButt.addEventListener("click",  function newAppend(){
-    console.log(newLabel)
-    newLabel.prepend(addNew.value)
-    //div.append(newLabel.innerText=addNew.value );
-    div.insertAdjacentElement("beforeend", newLabel)
-});
-
-
-
-
-//let addNewLabel = newLabel => 
-//addNew.addEventListener('onclick', )
 /*
-let addNew = x => labelArray.insertbefore(x);
-
-document.getElementById("addbutt").addEventListener("click", addNew(newLab));
 Regular Expressions
 
 var str = "https://";
