@@ -54,6 +54,7 @@ textarea:focus{
     display: block;
     font-size: medium;
 }
+
 #phone {
     border: 0px;
     border-bottom: solid 1px;
